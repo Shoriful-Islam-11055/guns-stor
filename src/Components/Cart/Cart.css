@@ -1,0 +1,16 @@
+.card-img{
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+}
+.body-cart{
+    background-color: rgb(201, 197, 197);
+}
+.card-btn{
+    background-color: rgb(245, 187, 80);
+    border: none;
+    border-radius: 5px;
+}
+.card-btn:hover{
+    background-color: gold;
+}

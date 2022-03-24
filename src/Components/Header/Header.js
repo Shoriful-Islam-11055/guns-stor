@@ -3,7 +3,7 @@ import icon from "../images/gunlogo.jpg"
 
 const Header = () => {
     return (
-        <div>
+        <div className='fixed-top'>
            <nav className="navbar navbar-dark bg-dark py-3">
                 <div className="container-fluid ">
                     <a className="navbar-brand" href="#">

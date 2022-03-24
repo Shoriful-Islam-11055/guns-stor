@@ -1,5 +1,28 @@
 .gunsCard-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
+    border-radius: 30px;
+}
+.gunsCard{
+    margin-top: 90px;
+}
+
+@media (max-width: 1050px) and (min-width: 710px) {
+    .gunsCard-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        width: 100%;
+    }
+    
+}
+@media (max-width: 710px) and (min-width: 200px) {
+    .gunsCard-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        width: 100%;
+    }
+    
 }

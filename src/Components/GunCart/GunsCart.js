@@ -6,13 +6,13 @@ const GunsCart = () => {
     const [guns, setGuns] = useState([]);
 
     useEffect(()=>{
-        fetch('data.json')
+        fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
         .then(res => res.json())
         .then(data => setGuns(data));
         
     },[])
     return (
-        <div className='mt-3'>
+        <div className='gunsCard'>
              <h2 className='text-center mb-3 text-decoration-underline text-success'>Our Guns</h2>
             <div className="gunsCard-container container">
                 {

@@ -1,18 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
-
+import './Cart.css'
 const Cart = ({gun}) => {
-    console.log(gun.name)
-    
+    // console.log(gun.name)
+    const {name, img, price, action, bullet} = gun;
     return (
-        <div>
-            <div class="card h-100">
-                <img src="" alt="" class="card-img-top"/>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div className='guns-cart'>
+            <div className="card Larger shadow">
+                <img src={img} alt="" className="card-img-top card-img"/>
+                <div className="card-body body-cart">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">
+                    Price: {price} <br />
+                    Action: {action} <br />
+                    Bullet: {bullet}
+                    </p>
+                    
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                <div className='footer-card'>
+                     <button className='card-btn py-2 w-100'><small className='me-2 fs-5 fw-bold'>Add to Card</small><FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>  
                 </div>
             </div>    
         </div>
