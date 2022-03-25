@@ -4,6 +4,10 @@ import './GunsCart.css'
 
 const GunsCart = () => {
     const [guns, setGuns] = useState([]);
+    
+    const haldleAddToCart =(id) =>{
+        console.log(id)
+    }
 
     useEffect(()=>{
         fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
@@ -16,7 +20,7 @@ const GunsCart = () => {
              <h2 className='text-center mb-3 text-decoration-underline text-success'>Our Guns</h2>
             <div className="gunsCard-container container">
                 {
-                guns.map(gun => <Cart key={gun.id} gun={gun}></Cart> )
+                guns.map(gun => <Cart key={gun.id} gun={gun} haldleAddToCart={haldleAddToCart}></Cart> )
                 }
             </div>
         </div>

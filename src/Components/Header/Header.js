@@ -5,6 +5,7 @@ import {faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
 
 const Header = () => {
+    
     return (
         <div className='fixed-top'>
             <nav className="navbar navbar-dark bg-dark py-3">

@@ -2,13 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import './Cart.css'
-const Cart = ({gun}) => {
+const Cart = ({gun, haldleAddToCart}) => {
     // console.log(gun.name)
-    const {name, img, price, action, bullet} = gun;
+    const {name, img, price, action, bullet, id} = gun;
 
-    const haldleAddToCart =() =>{
-        console.log('AddCard')
-    }
     return (
         <div className='guns-cart'>
             <div className="card Larger shadow">
@@ -25,7 +22,7 @@ const Cart = ({gun}) => {
                     
                 </div>
                 <div className='footer-card'>
-                     <button className='card-btn py-2 w-100' onClick={haldleAddToCart}><small className='me-2 fs-5 fw-bold'>Add to Card</small><FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>  
+                     <button className='card-btn py-2 w-100' onClick={()=> haldleAddToCart(id)}><small className='me-2 fs-5 fw-bold'>Add to Card</small><FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>  
                 </div>
             </div>    
         </div>
